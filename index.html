@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On Time Roofers — Free Roof Inspection | New York</title>
+<meta name="description" content="Storm damage in New York? Get a free roof inspection. We handle your insurance claim from start to finish. No out-of-pocket cost if not approved.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0B1F3A;
+    --navy-mid: #162E52;
+    --orange: #E8541A;
+    --orange-light: #F06B34;
+    --cream: #F7F5F0;
+    --white: #ffffff;
+    --gray-100: #F2F0EB;
+    --gray-300: #C8C5BC;
+    --gray-500: #7A7870;
+    --gray-800: #2C2B28;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--gray-800);
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    text-decoration: none;
+  }
+
+  .logo span { color: var(--orange); }
+
+  nav a.nav-cta {
+    background: var(--orange);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  nav a.nav-cta:hover { background: var(--orange-light); }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    padding: 80px 5% 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; gap: 40px; }
+    .hero-form { order: -1; }
+  }
+
+  .eyebrow {
+    display: inline-block;
+    background: rgba(232, 84, 26, 0.2);
+    color: var(--orange-light);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.0;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--orange);
+  }
+
+  .hero p {
+    color: #A8B8CC;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 440px;
+  }
+
+  .trust-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #A8B8CC;
+    font-size: 13px;
+  }
+
+  .trust-item svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    fill: var(--orange);
+  }
+
+  /* FORM CARD */
+  .hero-form {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 36px 32px;
+  }
+
+  .hero-form h2 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .hero-form p {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--gray-300);
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: var(--font-body);
+    color: var(--gray-800);
+    background: var(--white);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(232, 84, 26, 0.12);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--font-body);
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .btn-primary:hover { background: var(--orange-light); }
+  .btn-primary:active { transform: scale(0.99); }
+
+  .form-disclaimer {
+    font-size: 11px;
+    color: var(--gray-500);
+    text-align: center;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  /* HOW IT WORKS */
+  .section {
+    padding: 80px 5%;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 16px;
+    color: var(--gray-500);
+    max-width: 540px;
+    margin-bottom: 56px;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2px;
+    background: var(--gray-300);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .step {
+    background: var(--white);
+    padding: 36px 28px;
+  }
+
+  .step-num {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--gray-100);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.6;
+  }
+
+  /* INSURANCE LOGOS */
+  .logos-section {
+    background: var(--navy);
+    padding: 40px 5%;
+    text-align: center;
+  }
+
+  .logos-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5A7A99;
+    margin-bottom: 24px;
+  }
+
+  .logos-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .insurer-badge {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: #5A7A99;
+    letter-spacing: 0.5px;
+    padding: 8px 20px;
+    border: 1px solid #1E3A5A;
+    border-radius: 6px;
+  }
+
+  /* WHY US */
+  .why-section {
+    background: var(--white);
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .why-card {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 28px 24px;
+  }
+
+  .why-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(232, 84, 26, 0.12);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .why-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--orange);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .why-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .why-card p {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.6;
+  }
+
+  /* STATS */
+  .stats-section {
+    background: var(--orange);
+    padding: 60px 5%;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 40px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .testimonial {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 28px 24px;
+    border-left: 4px solid var(--orange);
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    color: var(--gray-800);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .author-loc {
+    font-size: 12px;
+    color: var(--gray-500);
+  }
+
+  .stars {
+    color: var(--orange);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+
+  /* CTA BOTTOM */
+  .cta-section {
+    background: var(--navy);
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+
+  .cta-section h2 em {
+    font-style: normal;
+    color: var(--orange);
+  }
+
+  .cta-section p {
+    color: #A8B8CC;
+    font-size: 16px;
+    margin-bottom: 36px;
+  }
+
+  .cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-display);
+    letter-spacing: 0.5px;
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .cta-phone:hover { background: var(--orange-light); }
+
+  .cta-phone svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #070F1C;
+    padding: 32px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer .logo { font-size: 18px; }
+
+  footer p {
+    font-size: 12px;
+    color: #3A5570;
+  }
+
+  /* TOAST */
+  #toast {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    border-left: 4px solid var(--orange);
+    z-index: 999;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">On Time <span>Roofers</span></a>
+  <a href="#inspection" class="nav-cta">Get free inspection</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">New York Storm Damage Specialists</span>
+    <h1>Your roof may qualify for a <em>free replacement</em></h1>
+    <p>Storm damage across New York has left thousands of roofs compromised. Most homeowners don't realize their insurance covers a full replacement — at little to no out-of-pocket cost.</p>
+    <div class="trust-row">
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20"><path d="M10 2l2.4 4.8 5.3.8-3.85 3.75.9 5.25L10 14.1l-4.75 2.5.9-5.25L2.3 7.6l5.3-.8z"/></svg>
+        Licensed & insured in NY
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20"><path d="M10 2l2.4 4.8 5.3.8-3.85 3.75.9 5.25L10 14.1l-4.75 2.5.9-5.25L2.3 7.6l5.3-.8z"/></svg>
+        We handle your entire claim
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20"><path d="M10 2l2.4 4.8 5.3.8-3.85 3.75.9 5.25L10 14.1l-4.75 2.5.9-5.25L2.3 7.6l5.3-.8z"/></svg>
+        No cost if not approved
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-form" id="inspection">
+    <h2>Check if you qualify</h2>
+    <p>Free inspection — takes 10 minutes. No obligation.</p>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First name</label>
+          <input type="text" placeholder="Maria" required>
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+          <input type="text" placeholder="Garcia" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone number</label>
+        <input type="tel" placeholder="(555) 000-0000" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="you@email.com" required>
+      </div>
+      <div class="form-group">
+        <label>City / ZIP code</label>
+        <input type="text" placeholder="Brooklyn, NY 11201" required>
+      </div>
+      <div class="form-group">
+        <label>Insurance carrier</label>
+        <select required>
+          <option value="" disabled selected>Select your carrier</option>
+          <option>State Farm</option>
+          <option>Allstate</option>
+          <option>Liberty Mutual</option>
+          <option>Travelers</option>
+          <option>Nationwide</option>
+          <option>GEICO</option>
+          <option>Farmers</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-primary">Request my free inspection →</button>
+      <p class="form-disclaimer">By submitting, you agree to be contacted by On Time Roofers via call, text, or email. Reply STOP to opt out at any time.</p>
+    </form>
+  </div>
+</section>
+
+<!-- INSURANCE LOGOS -->
+<div class="logos-section">
+  <p class="logos-label">We work with all major carriers</p>
+  <div class="logos-row">
+    <span class="insurer-badge">State Farm</span>
+    <span class="insurer-badge">Allstate</span>
+    <span class="insurer-badge">Liberty Mutual</span>
+    <span class="insurer-badge">Travelers</span>
+    <span class="insurer-badge">Nationwide</span>
+    <span class="insurer-badge">Farmers</span>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <p class="section-label">How it works</p>
+  <h2 class="section-title">From inspection to new roof — we handle everything</h2>
+  <p class="section-sub">Most homeowners try to navigate insurance claims alone and leave money on the table. We go through every step with you.</p>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Free roof inspection</h3>
+      <p>We come to your home within 48 hours and do a full damage assessment at zero cost to you.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>We file your claim</h3>
+      <p>Our team handles all paperwork and communications with your insurance company directly.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Adjuster meeting</h3>
+      <p>We meet the insurance adjuster on-site to make sure every damage point is documented and approved.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3>New roof installed</h3>
+      <p>Once approved, we install your new roof fast. Most jobs completed in 1–2 days.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num">97%</div>
+      <div class="stat-label">Claims approved</div>
+    </div>
+    <div>
+      <div class="stat-num">48h</div>
+      <div class="stat-label">Inspection turnaround</div>
+    </div>
+    <div>
+      <div class="stat-num">$0</div>
+      <div class="stat-label">Out-of-pocket for most homeowners</div>
+    </div>
+    <div>
+      <div class="stat-num">500+</div>
+      <div class="stat-label">NY roofs replaced</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="section why-section">
+  <p class="section-label">Why On Time Roofers</p>
+  <h2 class="section-title">We're not just a roofing company</h2>
+  <p class="section-sub">We specialize in insurance claims. That means we know exactly what adjusters look for — and how to make sure you get every dollar you're owed.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <h3>Exclusive leads, not shared</h3>
+      <p>Every homeowner we contact gets a dedicated team — no competing contractors calling the same person.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <h3>New York licensed</h3>
+      <p>Fully licensed and insured to operate in New York State. We know local building codes and adjuster expectations.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>No upfront cost</h3>
+      <p>If your claim isn't approved, you pay nothing. We only get paid when you get a new roof.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <h3>Fast response</h3>
+      <p>We respond to every inquiry within 2 hours and schedule inspections within 48 hours of contact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background: var(--cream);">
+  <p class="section-label">Homeowner reviews</p>
+  <h2 class="section-title">New York homeowners trust On Time</h2>
+  <p class="section-sub" style="margin-bottom: 40px;">Real results from real homeowners across New York.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"I had no idea my roof had storm damage until they did the inspection. Entire process took 3 weeks and I paid nothing out of pocket. Brand new roof."</p>
+      <div class="testimonial-author">
+        <div class="avatar">JR</div>
+        <div>
+          <div class="author-name">James R.</div>
+          <div class="author-loc">Queens, NY</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"State Farm approved my full claim. On Time handled every call with the adjuster — I literally just had to let them in the house. Highly recommend."</p>
+      <div class="testimonial-author">
+        <div class="avatar">ML</div>
+        <div>
+          <div class="author-name">Maria L.</div>
+          <div class="author-loc">Long Island, NY</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"After the hail storm last spring I wasn't sure if I qualified. Turns out I did. New roof installed in one day. Professional crew, zero mess left behind."</p>
+      <div class="testimonial-author">
+        <div class="avatar">DK</div>
+        <div>
+          <div class="author-name">David K.</div>
+          <div class="author-loc">Bronx, NY</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Don't leave a <em>free roof</em> on the table</h2>
+  <p>Storm season in New York is unpredictable. One inspection is all it takes to find out if you qualify.</p>
+  <a href="#inspection" class="cta-phone">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+    Request your free inspection →
+  </a>
+  <p style="margin-top: 20px; font-size: 13px; color: #3A5570;">Fill out the form above and we will contact you within 2 hours</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="logo">On Time <span>Roofers</span></a>
+  <p>© 2025 On Time Roofers · ontimeroofers.com · New York State Licensed</p>
+  <p>Licensed & Insured · Serving all NY boroughs and Long Island</p>
+</footer>
+
+<div id="toast">✓ Request received — we'll call you within 2 hours!</div>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const toast = document.getElementById('toast');
+  toast.style.display = 'block';
+  setTimeout(() => { toast.style.display = 'none'; }, 4000);
+  e.target.reset();
+}
+</script>
+
+</body>
+</html>
